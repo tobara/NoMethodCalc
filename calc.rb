@@ -8,7 +8,6 @@ class Calc
 
   def method_missing(name)
     build_express(name.to_s)
-    binding.pry
     calc = self.dup
     @expression.length < 3 ? calc : solve_exp
   end
